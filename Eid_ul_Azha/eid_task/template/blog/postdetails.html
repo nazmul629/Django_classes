@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+{% block contain %}
+        
+     
+           
+           <p>{{post_datels.name}}</p> 
+           <p>{{post_datels.title}}</p> 
+           <p>{{post_datels.author}}</p>
+           <p>{{post_datels.publication_date}}</p>
+           <img src="{{post_datels.photo.url}}">
+           <p>{{post_datels.description}}</p>
+           
+           
+
+
+
+
+
+ {% endblock %}

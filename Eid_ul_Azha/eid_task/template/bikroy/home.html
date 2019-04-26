@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block contain %}
+  <h1>city</h1>
+  <br>
+<ul>
+    {% for i in city_list %}
+    
+    <li><a href="{% url 'product_list_location' i.Name %}">{{i.Name}}</a></li>
+           
+    <hr>
+       
+
+    {% endfor %}
+
+
+    <br>
+    <br>
+
+<h1>Category</h1>
+<br>
+<ul>
+        {% for i in category_list %}
+        
+        <li><a href="{% url 'post_list_urls' i.Name %}"> {{i.Name}} </a></li>
+               
+        <hr>
+           
+    
+        {% endfor %}
+
+   
+     {% endblock %}
+
+</ul>

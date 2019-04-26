@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+ {%block contain %}
+
+ <h1>This is the page of my cost_list</h2>
+<table class="table  table-striped">
+<thead>
+    
+<tr>
+    <th>Purpose</th>
+    <th>Amount</th>
+    <th>Date</th>
+</tr>
+</thead>
+<tbody>
+{% for expense in expenses %}
+><tr>
+    <td>{{ expense.subject}}</td></h1>
+    <td>{{ expense.amount }}</td></h1>
+    <td>{{ expense.date }}</td></h1>
+</tr>
+
+{% endfor %}
+</tbody>
+
+</table>
+ 
+{% endblock %}

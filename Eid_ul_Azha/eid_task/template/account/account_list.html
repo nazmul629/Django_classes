@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block contain %}
+
+<h1>Book list</h1>
+ <br>
+ <br>
+ 
+<table class = "table">
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Action</td>
+    </tr>
+{% for acc in acc_lists %}
+<tr>
+<td>{{acc.name}}</td>
+<td>{{acc.acc_no}}</td>
+<td>{{acc.balance}}</td>
+<td>
+
+     <a class="btn btn-success" href="{% url 'edit-book' book.id %}">Edit</a>
+    <a class="btn btn-danger" href="{% url 'delete-book' book.id %}">Delete</a>
+</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

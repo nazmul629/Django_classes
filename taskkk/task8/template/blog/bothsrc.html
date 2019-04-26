@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+{% block contain %}
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Enter your search velu : <input type="text" name="name" placeholder=" Enter your search velu"/></p>
+     <input type="submit" value="search">
+
+
+</form>
+
+
+
+{% endblock %}

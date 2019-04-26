@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block contain %}
+
+ {% for i in post_list %}
+
+   <p>{{i.name}}</p>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,21 @@
+
+
+<h1>account list</h1>
+ <br>
+ <br>
+ 
+<table class = "table">
+    <tr>
+        <td>Name</td>
+        <td>Account no</td>
+        <td>Balance</td>
+    </tr>
+{% for acc in acc_list %}
+<tr>
+<td>{{acc.name}}</td>
+<td>{{acc.acc_no}}</td>
+<td>{{acc.balance}}</td>
+</tr>
+{% endfor %}
+</table>
+

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+ {%block contain %}
+   <ul>
+        {% for i in post_list %}
+        
+     
+        <li><a href="{% url 'datiles_post_url' i.id %}">{{i.title}}</a></li>
+           
+            <hr>
+
+        {% endfor %}
+
+     {% endblock %}
+
+   </ul>

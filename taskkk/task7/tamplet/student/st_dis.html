@@ -1,0 +1,42 @@
+<Html>
+        <head>
+            <title>this is Project </title>
+        </head>
+        <body>
+            
+    {% extends 'base.html' %}
+     {%block contain %}
+                
+    <table border="1">
+    <h1>
+        <tr>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>Result</th>
+            <th>District</th>
+            <th>Divition</th>
+        </tr>
+       
+            {% for std in students %}
+            <tr>
+                <td> {{std.Name}}</td>
+                <td>{{std.Roll}}</td>
+                <td> {{std.Result}}</td>
+                <td>{{std.District}}</td>
+                <td> {{std.Divition}}</td>
+    
+            </tr>
+    
+            {% endfor %}
+           </h1>
+    
+    
+    
+    </table>
+    
+                {% endblock %}
+    
+           
+        </body>
+    </Html>
+    

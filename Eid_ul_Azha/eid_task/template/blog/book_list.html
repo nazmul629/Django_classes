@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block contain %}
+
+<h1>Book list</h1>
+ <br>
+ <br>
+ 
+<table class = "table">
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Action</td>
+    </tr>
+{% for book in book_lists %}
+<tr>
+<td>{{book.name}}</td>
+<td>{{book.price}}</td>
+<td>
+
+   
+    <a class="btn btn-danger" href="{% url 'delete-book' book.id %}">Delete</a>
+</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

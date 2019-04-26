@@ -1,0 +1,18 @@
+<h1>Check blance page</h1>
+
+<form class="" action="" method="post">
+        {% csrf_token %}
+        {{forms.as_p}}
+        <input type="submit" value="Submit">
+    
+        
+    </form>
+    {% if name %}
+    <h2>{{name}} balance is : {{blance}}</h2>
+
+    {% endif %}
+
+    {% if Error %}
+
+    <h1> {{Error}} </h1>
+    {% endif %}
